@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Recipes</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header/Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">FlavorVerse</a>
+            <div class="space-x-6">
+                 <!-- Links would point to the correct pages -->
+                <a href="./index.html" class="text-gray-600 hover:text-indigo-600 font-medium transition">Home</a>
+                <!-- Style the active page link -->
+                <a href="#" class="text-indigo-600 font-semibold">Favorites</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">Your Favorite Recipes</h1>
+
+        <!-- Favorites Container -->
+        <!-- We will use JavaScript to show either the grid of recipes or the 'no favorites' message -->
+        <div id="favorites-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            
+
+        </div>
+
+        <!-- "No Favorites" Message -->
+        <!-- This will be hidden by default and shown with JS if there are no favorites -->
+        <div id="no-favorites-message" class="hidden text-center py-16">
+            <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+            </svg>
+            <h3 class="mt-2 text-xl font-medium text-gray-900">No favorites yet</h3>
+            <p class="mt-1 text-gray-500">You haven't added any recipes to your favorites.</p>
+            <div class="mt-6">
+                <a href="./index.html" class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Discover Recipes
+                </a>
+            </div>
+        </div>
+
+    </main>
+    
+    <script src="favourite.js"></script>
+</body>
+</html>
